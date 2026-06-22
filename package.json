@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.mjs",
     "dev": "node server.mjs",
+    "build": "echo \"No build step required\"",
     "check": "node --check server.mjs"
   },
   "engines": {

@@ -43,10 +43,33 @@ npm start
 npm run check
 ```
 
+## Deploy en Vercel
+
+Este repo esta preparado para Vercel:
+
+- `public/index.html` sirve la interfaz.
+- `api/find-seller-id.mjs` sirve el endpoint serverless `/api/find-seller-id`.
+- `server.mjs` queda para uso local.
+
+Pasos:
+
+1. Subir el repo a GitHub.
+2. Entrar a Vercel.
+3. New Project.
+4. Importar `iFaaka/meli-seller-id-finder`.
+5. Framework Preset: `Other`.
+6. Build Command: `npm run build` o dejar el default si Vercel lo detecta.
+7. Output Directory: dejar vacio.
+8. Deploy.
+
+La URL final de Vercel va a servir la app y el frontend va a llamar automaticamente a `/api/find-seller-id`.
+
 ## Estructura
 
 ```text
 .
+├── api/
+│   └── find-seller-id.mjs
 ├── public/
 │   └── index.html
 ├── server.mjs
